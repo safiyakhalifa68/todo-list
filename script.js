@@ -5,7 +5,6 @@ displayTasks();
 function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
-
 function displayTasks(){
 
     let list=document.getElementById("taskList");

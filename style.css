@@ -1,18 +1,45 @@
 body{
-    background:#f4f4f4;
+    background:#f1f3f6;
 }
 
-.completed{
-    text-decoration: line-through;
-    color:gray;
+.container{
+    max-width:650px;
+    margin-top:40px;
 }
 
-li{
+.card{
+    border-radius:12px;
+}
+
+h2{
+    font-weight:bold;
+}
+
+#taskList{
+    margin-top:20px;
+}
+
+#taskList li{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:12px 15px;
+    border-radius:8px;
+    margin-bottom:10px;
+    background:#fff;
+    border:1px solid #ddd;
+    transition:0.3s;
+}
+
+#taskList li:hover{
+    background:#f8f9fa;
+}
+
+.completed{
+    text-decoration:line-through;
+    color:gray;
 }
 
 .buttons button{
-    margin-left:5px;
+    margin-left:6px;
 }
