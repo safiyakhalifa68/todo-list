@@ -5,6 +5,28 @@ displayTasks();
 function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+function addTask() {
+
+    let input = document.getElementById("taskInput");
+
+    let text = input.value.trim();
+
+    if(text==""){
+        alert("Enter Task");
+        return;
+    }
+
+    tasks.push({
+        task:text,
+        completed:false
+    });
+
+    saveTasks();
+
+    displayTasks();
+
+    input.value="";
+}
 function displayTasks(){
 
     let list=document.getElementById("taskList");
