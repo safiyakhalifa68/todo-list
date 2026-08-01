@@ -48,7 +48,6 @@ function displayTasks(){
         <span>${item.task}</span>
 
         <div class="buttons">
-<<<<<<< HEAD
          <button class="btn btn-primary btn-sm"
         onclick="editTask(${index})">
         Edit
@@ -56,13 +55,12 @@ function displayTasks(){
         <button class="btn btn-danger btn-sm"
         onclick="deleteTask(${index})">
         Delete
-=======
+
         <button class="btn btn-success btn-sm"
         onclick="completeTask(${index})">
 
         ${item.completed ? "Undo" : "Complete"}
 
->>>>>>> feature-complete-task
         </button>
 
         `;
