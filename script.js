@@ -26,11 +26,26 @@ function displayTasks(){
         <span>${item.task}</span>
 
         <div class="buttons">
+        <button class="btn btn-success btn-sm"
+        onclick="completeTask(${index})">
+
+        ${item.completed ? "Undo" : "Complete"}
+
+        </button>
 
         `;
 
         list.appendChild(li);
 
     });
+
+}
+function completeTask(index){
+
+    tasks[index].completed=!tasks[index].completed;
+
+    saveTasks();
+
+    displayTasks();
 
 }
