@@ -48,11 +48,31 @@ function displayTasks(){
         <span>${item.task}</span>
 
         <div class="buttons">
+         <button class="btn btn-primary btn-sm"
+        onclick="editTask(${index})">
+        Edit
+        </button>
 
         `;
 
         list.appendChild(li);
 
     });
+
+}
+
+function editTask(index){
+
+    let newTask=prompt("Edit Task",tasks[index].task);
+
+    if(newTask!=null && newTask.trim()!=""){
+
+        tasks[index].task=newTask;
+
+        saveTasks();
+
+        displayTasks();
+
+    }
 
 }
