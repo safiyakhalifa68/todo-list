@@ -52,6 +52,10 @@ function displayTasks(){
         onclick="editTask(${index})">
         Edit
         </button>
+        <button class="btn btn-danger btn-sm"
+        onclick="deleteTask(${index})">
+        Delete
+        </button>
 
         `;
 
@@ -63,11 +67,22 @@ function displayTasks(){
 
 function editTask(index){
 
-    let newTask=prompt("Edit Task",tasks[index].task);
+    let newTask = prompt("Edit Task", tasks[index].task);
 
-    if(newTask!=null && newTask.trim()!=""){
+    if(newTask != null && newTask.trim() != ""){
 
-        tasks[index].task=newTask;
+        tasks[index].task = newTask;
+
+        saveTasks();
+
+        displayTasks();
+    }
+}
+function deleteTask(index){
+
+    if(confirm("you want to Delete this task?")){
+
+        tasks.splice(index,1);
 
         saveTasks();
 
