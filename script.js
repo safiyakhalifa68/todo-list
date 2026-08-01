@@ -26,11 +26,29 @@ function displayTasks(){
         <span>${item.task}</span>
 
         <div class="buttons">
+        <button class="btn btn-danger btn-sm"
+        onclick="deleteTask(${index})">
+        Delete
+        </button>
 
         `;
 
         list.appendChild(li);
 
     });
+
+}
+
+function deleteTask(index){
+
+    if(confirm("you want to Delete this task?")){
+
+        tasks.splice(index,1);
+
+        saveTasks();
+
+        displayTasks();
+
+    }
 
 }
